@@ -4,15 +4,17 @@ import React from 'react';
 //segun el parametro que le pasemos
 //si una funcion es de una linea puedo hacerlo con parantesis
 //pero si es mas de una linea uso las llaves con el return
+    // console.log(props)
+    // debugger;
 
-const Location = (props) => {
-    console.log(props)
-    debugger;
-    return (
+
+const Location = ({city, city2}) => (
+    //Destructuring
     <div>
-        <h1></h1>
+        <h1>
+            {city} y también {city2}
+        </h1>
     </div>
-    )
-};
+ );
 
 export default Location;
