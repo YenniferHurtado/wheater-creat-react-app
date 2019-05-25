@@ -8,8 +8,8 @@ import React from 'react';
     // debugger;
 
 
+
 const Location = ({city, city2}) => (
-    //Destructuring
     <div>
         <h1>
             {city} y también {city2}
