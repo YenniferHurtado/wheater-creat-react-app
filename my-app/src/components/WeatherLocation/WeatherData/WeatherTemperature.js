@@ -8,7 +8,7 @@ import {
     RAIN,
     SNOW,
     WINDY,
-} from './../contants/weathers'
+} from './../../../contants/weathers'
 
 const icons = {
     [CLOUD]: 'cloud',
@@ -23,10 +23,10 @@ const getWeatherIcon = weatherState => {
     const icon = icons[weatherState];
 
     if (icon) {
-        return <WeatherIcons name={icon} size="2px" />
+        return <WeatherIcons name={icon} />
     }
     else {
-        return <WeatherIcons name={'day-sunny'} size="2px" />
+        return <WeatherIcons name={'day-sunny'} />
     }
 }
 
@@ -37,7 +37,7 @@ const WeatherTemperature = ({ temperature, weatherState }) => (
         }
         <span>
             {`${temperature} Cº`}
-        </span>
+        </span> 
     </div>
 );
 

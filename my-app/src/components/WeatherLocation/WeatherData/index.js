@@ -2,13 +2,13 @@ import React from 'react';
 import WeatherTemperature from './WeatherTemperature';
 import WeatherExtraInfo from './WeatherExtraInfo'
 import {
-    CLOUD,
     CLOUDY,
-    SUN,
-    RAIN,
-    SNOW,
-    WINDY,
-} from './../contants/weathers'
+    // CLOUD,
+    // SUN,
+    // RAIN,
+    // SNOW,
+    // WINDY,
+} from './../../../contants/weathers'
 
 
 const WeatherData = () => (
