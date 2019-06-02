@@ -13,10 +13,10 @@ import {
 
 const icons = {
     [CLOUD]: 'cloud',
-    [SUN]: 'sun',
+    [SUN]: 'day-sunny',
     [RAIN]: 'rain',
     [SNOW]: 'snow',
-    [THUNDER]: 'day-thunderstore',
+    [THUNDER]: 'day-thunderstorm',
     [DIZZLE]: 'day-showers',
 
 };
