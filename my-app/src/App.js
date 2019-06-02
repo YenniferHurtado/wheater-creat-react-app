@@ -6,6 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import LocationList from './components/LocationList';
+import ForecastExtended from './components/ForecastExtended';
 import './App.css';
 
 const cities = [
@@ -19,39 +20,52 @@ const cities = [
 
 class App extends Component {
 
+  constructor() {
+    super()
+    this.state = { city: null };
+  }
   handleSelectionLocation = city => {
-
+    this.setState({ city });
   }
 
   render() {
+
+    const { city } = this.state;
     return (
-      <Grid>
-        <Row> 
-          <AppBar position="sticky">
-            <Toolbar>
-              <Typography variant="title" color="inherit">
-                Weather App
-              </Typography>
-            </Toolbar>
-          </AppBar>
-        </Row>
-        <Row>
-          <Col xs={12} md={6}>
-            <LocationList 
-              cities={cities}
-              onSelectedLocation={this.handleSelectionLocation}
-            />
-          </Col>
-          <Col xs={12} md={6}>
-            <Paper elevation={4}> 
-              <div className='details'>
-                hola
-              </div>
-            </Paper>
-          </Col>
-        </Row>      
-      </Grid>
-    )};
+  
+        <Grid>
+          <Row> 
+            <Col xs={12}>
+            <AppBar position="sticky">
+              <Toolbar>
+                <Typography variant="h4" color="inherit">
+                  Weather App
+                </Typography>
+              </Toolbar>
+            </AppBar>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={6}>
+              <LocationList 
+                cities={cities}
+                onSelectedLocation={this.handleSelectionLocation}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <Paper> 
+                <div className='detail'>
+                  { city === null ? 
+                      <h1>No se selecciono</h1> :
+                      <ForecastExtended city={city}/>
+                  }
+                </div>
+              </Paper>
+            </Col>
+          </Row>      
+        </Grid>
+
+  )};
 }
 
 export default App;
