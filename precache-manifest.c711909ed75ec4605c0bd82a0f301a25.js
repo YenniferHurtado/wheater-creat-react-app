@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "545a9bbd989571592542eae268f82ebb",
+    "revision": "adf815d926ac53ce87256395e8a5c75e",
     "url": "/wheater-creat-react-app/index.html"
   },
   {
