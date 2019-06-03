@@ -6,4 +6,4 @@ Al seleccionar el país que prefiera, podrás visualizar la temperatura que le e
 
 Los datos fueron tomados de:
 
-[enlace a la Api](https://openweathermap.org/api)
+[Enlace a la Api de OpenWeatherMap](https://openweathermap.org/api)
