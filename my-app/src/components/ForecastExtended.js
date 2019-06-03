@@ -18,8 +18,19 @@ class ForecastExtended extends Component {
     }
 
     componentDidMount() {
+        this.updateCity(this.props.city);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.city !== this.props.city) {
+            this.setState({forecastData: null});
+            this.updateCity(nextProps.city)
+        }
+    }
+    
+    updateCity = city => {
         // fetch o axios
-        const url_forecast = `${url_base_weather}?q=${this.props.city}&appid=${api_key}`;
+        const url_forecast = `${url_base_weather}?q=${city}&appid=${api_key}`;
 
         fetch(url_forecast)
             .then(data => (data.json()))
@@ -41,7 +52,7 @@ class ForecastExtended extends Component {
     }
 
     renderProgress = () => {
-        return <h1>'cargando data'</h1>;
+        return <h1>'Cargando pronóstico extendido...'</h1>;
     }
 
     render() {
