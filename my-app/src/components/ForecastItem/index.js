@@ -4,14 +4,14 @@ import WeatherData from './../WeatherLocation/WeatherData/index'
 
 const ForecastItem = ({ weekDay, hour, data }) => (
   <div>
-      {weekDay} Hora: {hour} hs.
+      <h2>{weekDay} - {hour} hs.</h2>
       <WeatherData data={data}/>
   </div>  
 );
 
 ForecastItem.propTypes = {
     weekDay: PropTypes.string.isRequired,
-    hour: PropTypes.string.isRequired,
+    hour: PropTypes.number.isRequired,
     data: PropTypes.shape({
         temperature: PropTypes.number.isRequired,
         weatherState: PropTypes.string.isRequired,
